@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pac-yR-zd1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fMv-oq-0EU">
+            <objects>
+                <viewController id="Pac-yR-zd1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H2a-U1-6xa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="J4b-1g-Pzf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6Y-su-6oa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-642" y="139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PDFMergeExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCF-84-POe" customClass="PDFView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="776"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89h-Z2-KE5" customClass="PDFThumbnailView">
+                                <rect key="frame" x="0.0" y="776" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Zsk-VB-Gnz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hCF-84-POe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4dA-DI-QF9"/>
+                            <constraint firstItem="89h-Z2-KE5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="74C-v7-NIm"/>
+                            <constraint firstItem="hCF-84-POe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eS9-qA-1cm"/>
+                            <constraint firstItem="hCF-84-POe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fR3-Py-bGF"/>
+                            <constraint firstItem="89h-Z2-KE5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oO5-LM-CTH"/>
+                            <constraint firstAttribute="bottom" secondItem="89h-Z2-KE5" secondAttribute="bottom" constant="20" id="qdH-j4-PiC"/>
+                            <constraint firstItem="89h-Z2-KE5" firstAttribute="top" secondItem="hCF-84-POe" secondAttribute="bottom" id="rL3-jl-SRn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="thumbnailView" destination="89h-Z2-KE5" id="Ppx-9q-FbC"/>
+                        <outlet property="viewPDF" destination="hCF-84-POe" id="bIq-MY-PjB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
